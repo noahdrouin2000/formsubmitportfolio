@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,12 +21,21 @@
   <body>
     <div class="loading-div">
       <div class="loading-bg">
+        <div class="nav-start">
+          <div class="start-lang-btn">
+            <a class="fr-start">FR</a>
+          </div>
+          <div class="start-lang-btn">
+            <a class="en-start">EN</a>
+          </div>
+        </div>
         <div class="loading-n">
           <h1 class="h1-n">n</h1>
           <h1 class="span-n">_</h1>
         </div>
         <div class="sub-logo">
-          <h1 class="sub-h1">// press n to enter</h1>
+          <h1 lang="en" class="sub-h1">// press n to enter</h1>
+          <h1 lang="fr" class="sub-h1">// tapez n pour entrer</h1>
           <div class="loading-bar-container">
             <div class="loading-bar"></div>
           </div>
@@ -42,35 +51,70 @@
         <div class="nav-links">
           <ul class="nav-ul">
             <li class="li-animation">
-              <a href="#nav" id="home"><span>//</span> home_</a>
+              <a lang="en" href="#nav" id="home"><span>//</span> home_</a>
+              <a lang="fr" href="#nav" id="home"><span>//</span> accueil_</a>
             </li>
             <li class="li-animation">
-              <a href="#skills-link" id="skills"><span>//</span> skills_</a>
+              <a lang="en" href="#skills-link" id="skills"
+                ><span>//</span> skills_</a
+              >
+              <a lang="fr" href="#skills-link" id="skills"
+                ><span>//</span> compétences_</a
+              >
             </li>
             <li class="li-animation">
-              <a href="#about-link" id="about"><span>//</span> about_</a>
+              <a lang="en" href="#about-link" id="about"
+                ><span>//</span> about_</a
+              >
+              <a lang="fr" href="#about-link" id="about"
+                ><span>//</span> à propos_</a
+              >
             </li>
             <li class="li-animation">
-              <a href="#projects-link" id="projects"><span>//</span> projects_</a>
+              <a lang="en" href="#projects-link" id="projects"
+                ><span>//</span> projects_</a
+              >
+              <a lang="fr" href="#projects-link" id="projects"
+                ><span>//</span> projets_</a
+              >
             </li>
             <li class="li-animation">
-              <a href="#contact-link" id="contact"><span>//</span> contact_</a>
+              <a lang="en" href="#contact-link" id="contact"
+                ><span>//</span> contact_</a
+              >
+              <a lang="fr" href="#contact-link" id="contact"
+                ><span>//</span> contactez-moi_</a
+              >
+            </li>
+            <li class="li-animation">
+              <a class="fr-a">FR</a>
+            </li>
+            <li class="li-animation">
+              <a class="en-a">EN</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="first-text-div">
-        <h3 class="first-text-h3">Hi, my name is</h3>
+        <h3 lang="en" class="first-text-h3">Hi, my name is</h3>
+        <h3 lang="fr" class="first-text-h3">Bonjour, mon nom est</h3>
         <h1 class="first-text-name">Noah Drouin.</h1>
-        <h1 class="first-text-h1">I build websites.</h1>
+        <h1 lang="en" class="first-text-h1">I build websites.</h1>
+        <h1 lang="fr" class="first-text-h1">Je crée des sites web.</h1>
         <div class="div-learn-more">
-          <a id="skills-link" href="#skills-link">learn more!</a>
+          <a lang="en" id="skills-link" href="#skills-link">learn more!</a>
+          <a lang="fr" id="skills-link" href="#skills-link">en savoir plus!</a>
         </div>
       </div>
       <div class="skills-cont">
         <div class="skills-hidden">
           <div class="skills-h1-box">
-            <h1 class="skills-h1">my skills<span class="span_two">_</span></h1>
+            <h1 lang="en" class="skills-h1">
+              my skills<span class="span_two">_</span>
+            </h1>
+            <h1 lang="fr" class="skills-h1">
+              compétences<span class="span_two">_</span>
+            </h1>
           </div>
           <div class="skills-text-cont">
             <div class="skills-text">
@@ -121,10 +165,15 @@
           <img src="./Images/memoji.png" class="memoji" alt="me" />
         </div>
         <div class="about-h1-box">
-          <h1 class="about-h1">about me<span class="span_three">_</span></h1>
+          <h1 lang="en" class="about-h1">
+            about me<span class="span_three">_</span>
+          </h1>
+          <h1 lang="fr" class="about-h1">
+            à propos<span class="span_three">_</span>
+          </h1>
         </div>
         <div class="about-p-box">
-          <p class="about-p">
+          <p lang="en" class="about-p">
             Hello! My name is Noah and I enjoy building websites and all sorts
             of things on the internet! I’ve been doing this for about a year and
             a half. It all started with trying to build a website for a
@@ -134,13 +183,27 @@
             build practical, yet easy-to-use products and websites for a variety
             of clients!
           </p>
+          <p lang="fr" class="about-p">
+            Bonjour! Mon nom est Noah et j’adore créer des sites web et toutes
+            sortes de choses sur le web! Je poursuis cette carrière depuis
+            maintenant 1 an et demi. Tout a commencé lorsque j’ai tenté de
+            construire un site pour un proche, et depuis ce jour cette carrière
+            me passionne de plus en plus à chaque instant! Bien sûr, à ce jour
+            j’ai créé une tonne de projets en utilisant majoritairement HTML,
+            CSS, et Javascript. Mon objectif ces jours-ci est de construire des
+            sites et produits web pratiques, tout en étant faciles à utiliser,
+            et ce pour une variété de clients!
+          </p>
         </div>
       </div>
       <div id="projects-link" class="projects-cont">
         <div class="projects">
           <div class="projects-title-box">
-            <h1 class="projects-title">
+            <h1 lang="en" class="projects-title">
               my projects<span class="span_four">_</span>
+            </h1>
+            <h1 lang="fr" class="projects-title">
+              projets<span class="span_four">_</span>
             </h1>
           </div>
           <div class="first-row">
@@ -166,19 +229,35 @@
       <div class="contact-cont">
         <div class="contact">
           <div class="contact-title-box">
-            <h1 class="contact-title">
+            <h1 lang="en" class="contact-title">
               contact me<span class="span_five">_</span>
             </h1>
+            <h1 lang="fr" class="contact-title">
+              contactez-moi<span class="span_five">_</span>
+            </h1>
           </div>
-          <form class="form-cont">
-            <section>
-              <form action="https://formsubmit.co/noahdrouin@gmail.com" method="POST">
-                <input type="text" name="name" required>
-                <input type="email" name="email" required>
-                <button type="submit">Send</button>
-           </form>
-            </section>
-          </form>
+          <div class="form-cont">
+              <form
+              action= "https://formsubmit.co/4be32dba33cb958d99cb52a75bd505bf" method="POST"
+              >
+                <label class="name">
+                  <input name="name" id="name" type="text" required />
+                  <div lang="en" class="label-text">Full Name</div>
+                  <div lang="fr" class="label-text">Nom Complet</div>
+                </label>
+                <label>
+                  <input type="email" name="email" id="email" required />
+                  <div class="label-text">Email</div>
+                </label>
+                <label>
+                  <input type="tel" name="phone" id="phone" required />
+                  <div lang="en" class="label-text">Phone Number</div>
+                  <div lang="fr" class="label-text">N° de téléphone</div>
+                </label>
+                <button class="contact-fr" type="submit" value="submit">Contact</button>
+              </form>
+          </div>
+          </div>
         </div>
       </div>
     </div>

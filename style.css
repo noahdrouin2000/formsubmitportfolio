@@ -32,16 +32,67 @@ body {
 }
 
 .loading-div {
-  display: none;
 }
 
 .loading-bg {
   height: 100vh;
   width: 100%;
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   background-color: #0a1930;
+}
+
+.nav-start {
+  width: 100%;
+  height: 10rem;
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.start-lang-btn {
+  color: #1ec8c0;
+  display: flex;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.fr-start {
+  text-decoration: none;
+  color: #c01ec8;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #c01ec8;
+  border-radius: 7px;
+  transition: all 0.75s ease;
+  cursor: pointer;
+  margin: 0 0 0 1.5rem;
+}
+
+.fr-start:hover {
+  color: #0a1930;
+  background-color: #c01ec8;
+}
+
+.en-start {
+  text-decoration: none;
+  color: #1ec8c0;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #1ec8c0;
+  border-radius: 7px;
+  transition: all 0.75s ease;
+  cursor: pointer;
+  margin: 0 5rem 0 1.5rem;
+}
+
+.en-start:hover {
+  color: #0a1930;
+  background-color: #1ec8c0;
 }
 
 .loading-n {
@@ -52,7 +103,7 @@ body {
 .h1-n {
   font-size: 12rem;
   color: #1ec8c0;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   height: fit-content;
@@ -119,10 +170,11 @@ body {
 
 .first-page {
   width: 100vw;
-  height: 450vh;
+  height: 440vh;
   overflow: hidden;
   background-image: url("./Images/bg-code.png");
   position: absolute;
+  display: none;
 }
 
 .line-container {
@@ -130,17 +182,18 @@ body {
   top: 0;
   left: 0;
   width: fit-content;
-  height: 450vh;
+  height: 440vh;
   text-align: center;
   overflow: hidden;
   margin: auto;
   z-index: 1;
   pointer-events: none;
+  display: none;
 }
 
 svg {
   display: inline-block;
-  height: 450vh;
+  height: 440vh;
 }
 
 @keyframes bg-load {
@@ -157,7 +210,7 @@ svg {
 
 .nav {
   display: flex;
-  height: 9rem;
+  height: 8rem;
   align-items: center;
   padding-top: 6rem;
 }
@@ -205,10 +258,10 @@ svg {
 .li-animation {
   color: #1ec8c0;
   display: flex;
-  margin-right: 3rem;
   font-size: 1.6rem;
   cursor: pointer;
   z-index: 1;
+  align-items: center;
 }
 
 .li-animation span {
@@ -225,6 +278,7 @@ svg {
   text-decoration: none;
   color: #1ec8c0;
   transition: color 0.6s ease;
+  margin-right: 3rem;
 }
 
 #home:hover,
@@ -245,6 +299,7 @@ svg {
   text-decoration: none;
   color: #1ec8c0;
   transition: color 0.6s ease;
+  margin-right: 3rem;
 }
 
 #skills {
@@ -257,6 +312,7 @@ svg {
   text-decoration: none;
   color: #1ec8c0;
   transition: color 0.6s ease;
+  margin-right: 3rem;
 }
 
 #projects {
@@ -269,6 +325,7 @@ svg {
   text-decoration: none;
   color: #1ec8c0;
   transition: color 0.6s ease;
+  margin-right: 3rem;
 }
 
 #contact {
@@ -281,12 +338,45 @@ svg {
   text-decoration: none;
   color: #1ec8c0;
   transition: color 0.6s ease;
+  margin-right: 2rem;
 }
 
 @keyframes type {
   from {
     width: 0;
   }
+}
+
+.fr-a {
+  text-decoration: none;
+  color: #c01ec8;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #c01ec8;
+  border-radius: 7px;
+  margin-left: 1.5rem;
+  transition: all 0.75s ease;
+  margin-right: 1.5rem;
+}
+
+.fr-a:hover {
+  color: #0a1930;
+  background-color: #c01ec8;
+}
+
+.en-a {
+  text-decoration: none;
+  color: #1ec8c0;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #1ec8c0;
+  border-radius: 7px;
+  transition: all 0.75s ease;
+}
+
+.en-a:hover {
+  color: #0a1930;
+  background-color: #1ec8c0;
 }
 
 .first-text-div {
@@ -319,10 +409,10 @@ svg {
 }
 
 .div-learn-more a {
-  display: flex;
   position: relative;
   top: 2rem;
   color: #c01ec8;
+  justify-content: center;
   font-size: 2rem;
   text-decoration: none;
   border: 3px solid #c01ec8;
@@ -846,6 +936,7 @@ svg {
 form {
   text-align: center;
   border: 5px solid #8892af;
+  border-radius: 1rem;
   padding: 50px;
 }
 
@@ -899,7 +990,25 @@ label input:focus + .label-text {
   transform: translateY(-74px);
 }
 
+label input:focus + .label-text + .label-text {
+  color: #1ec8c0;
+  font-size: 1rem;
+  margin-top: 10px;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
+}
+
 label input:valid + .label-text {
+  font-size: 1rem;
+  -moz-transform: translateY(-74px);
+  -ms-transform: translateY(-74px);
+  -webkit-transform: translateY(-74px);
+  transform: translateY(-74px);
+}
+
+label input:valid + .label-text + .label-text {
   font-size: 1rem;
   -moz-transform: translateY(-74px);
   -ms-transform: translateY(-74px);
@@ -925,8 +1034,7 @@ button {
   border-radius: 7px;
 }
 
-button:hover,
-button:focus {
+button:hover {
   color: #0a1930;
   background-color: #c01ec8;
 }

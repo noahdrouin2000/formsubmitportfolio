@@ -3,25 +3,32 @@
 const logoBar = document.querySelector(".span-n");
 const logoN = document.querySelector(".h1-n");
 const loadingDiv = document.querySelector(".loading-div");
-const subH1 = document.querySelector(".sub-h1");
+const subH1 = document.querySelectorAll(".sub-h1");
 const loadingBarCont = document.querySelector(".loading-bar-container");
 const loadingBar = document.querySelector(".loading-bar");
 const firstPage = document.querySelector(".first-page");
-const skills = document.querySelector(".skills");
 const spanBar = document.querySelector(".span_");
-const spanBarTwo = document.querySelector(".span_two");
+const spanBarTwo = document.querySelectorAll(".span_two");
 const skillsHidden = document.querySelectorAll(".skills-hidden");
 const mouseAnimate = document.querySelectorAll(".mouse");
-const spanBarThree = document.querySelector(".span_three");
+const spanBarThree = document.querySelectorAll(".span_three");
 const path = document.querySelector("path");
 const lineContainer = document.querySelector(".line-container");
 const firstText = document.querySelector(".first-text-div");
 const aboutCont = document.querySelector(".about-cont");
-const spanBarFour = document.querySelector(".span_four");
+const spanBarFour = document.querySelectorAll(".span_four");
 const projectImg = document.querySelectorAll(".project-img");
 const projectsCont = document.querySelectorAll(".projects-cont");
-const spanBarFive = document.querySelector(".span_five");
+const spanBarFive = document.querySelectorAll(".span_five");
 const contactCont = document.querySelector(".contact-cont");
+const frBtn = document.querySelector(".fr-a");
+const enBtn = document.querySelector(".en-a");
+const frElems = document.querySelectorAll("body [lang='fr']");
+const enElems = document.querySelectorAll("body [lang='en']");
+const skillsLink = document.getElementById("skills-link");
+const frBtnStart = document.querySelector(".fr-start");
+const enBtnStart = document.querySelector(".en-start");
+const contactFr = document.querySelector(".contact-fr");
 
 //Event Listeners
 
@@ -37,18 +44,25 @@ window.addEventListener("load", blinkerThree);
 window.addEventListener("scroll", svgScroll);
 window.addEventListener("load", blinkerFour);
 window.addEventListener("load", blinkerFive);
+window.addEventListener("scroll", checkPositionProjects);
+window.addEventListener("scroll", checkPositionContact);
 for (var i = 0; i < projectImg.length; i++) {
   projectImg[i].addEventListener("mouseenter", greyOverlay);
 }
 for (var i = 0; i < projectImg.length; i++) {
   projectImg[i].addEventListener("mouseleave", greyOverlayOut);
 }
-window.addEventListener("scroll", checkPositionProjects);
-window.addEventListener("scroll", checkPositionContact);
+frBtnStart.addEventListener("click", changeLangFr);
+frBtn.addEventListener("click", changeLangFr);
+enBtnStart.addEventListener("click", changeLangEn);
+enBtn.addEventListener("click", changeLangEn);
 
 //Functions
 
 function blinkerLoading() {
+  frElems.forEach((frElem) => {
+    frElem.style.display = "none";
+  });
   setInterval(function () {
     logoBar.style.display = logoBar.style.display == "" ? "none" : "";
   }, 700);
@@ -58,7 +72,8 @@ function writeN(e) {
   if (e.key === "n") {
     logoN.style.display = "flex";
     logoBar.style.left = "55%";
-    subH1.style.display = "none";
+    subH1[0].style.display = "none";
+    subH1[1].style.display = "none";
     loadingBarCont.style.display = "flex";
     loadingBar.classList = "loading-bar-start";
     setTimeout(function timeOut() {
@@ -72,19 +87,13 @@ function writeN(e) {
 function blinkerTwo() {
   setInterval(function () {
     spanBar.style.display = spanBar.style.display == "" ? "none" : "";
-    
   }, 700);
 }
 
 function blinkerSkills() {
   setInterval(function () {
-    spanBar.style.display = spanBar.style.display == "" ? "none" : "";
-  }, 700);
-}
-
-function blinkerTwo() {
-  setInterval(function () {
-    spanBarTwo.style.display = spanBarTwo.style.display == "" ? "none" : "";
+    spanBarTwo[0].style.display = spanBarTwo[0].style.display == "" ? "none" : "";
+    spanBarTwo[1].style.display = spanBarTwo[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -128,7 +137,8 @@ function mouseHover(e) {
 
 function blinkerThree() {
   setInterval(function () {
-    spanBarThree.style.display = spanBarThree.style.display == "" ? "none" : "";
+    spanBarThree[0].style.display = spanBarThree[0].style.display == "" ? "none" : "";
+    spanBarThree[1].style.display = spanBarThree[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -160,7 +170,8 @@ function svgScroll() {
 
 function blinkerFour() {
   setInterval(function () {
-    spanBarFour.style.display = spanBarFour.style.display == "" ? "none" : "";
+    spanBarFour[0].style.display = spanBarFour[0].style.display == "" ? "none" : "";
+    spanBarFour[1].style.display = spanBarFour[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -196,7 +207,8 @@ function checkPositionProjects() {
 
 function blinkerFive() {
   setInterval(function () {
-    spanBarFive.style.display = spanBarFive.style.display == "" ? "none" : "";
+    spanBarFive[0].style.display = spanBarFive[0].style.display == "" ? "none" : "";
+    spanBarFive[1].style.display = spanBarFive[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -217,3 +229,26 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+function changeLangFr() {
+  skillsLink.id = " ";
+  contactFr.innerHTML = "contacter"
+  enElems.forEach((enElem) => {
+    enElem.style.display = "none";
+  });
+  frElems.forEach((frElem) => {
+    frElem.style.display = "";
+  });
+}
+
+function changeLangEn() {
+  skillsLink.id = "skills-link";
+  contactFr.innerHTML = "contact"
+  frElems.forEach((frElem) => {
+    frElem.style.display = "none";
+  });
+  enElems.forEach((enElem) => {
+    enElem.style.display = "";
+  });
+}
+
