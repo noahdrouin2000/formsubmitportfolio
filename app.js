@@ -92,8 +92,10 @@ function blinkerTwo() {
 
 function blinkerSkills() {
   setInterval(function () {
-    spanBarTwo[0].style.display = spanBarTwo[0].style.display == "" ? "none" : "";
-    spanBarTwo[1].style.display = spanBarTwo[1].style.display == "" ? "none" : "";
+    spanBarTwo[0].style.display =
+      spanBarTwo[0].style.display == "" ? "none" : "";
+    spanBarTwo[1].style.display =
+      spanBarTwo[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -137,8 +139,10 @@ function mouseHover(e) {
 
 function blinkerThree() {
   setInterval(function () {
-    spanBarThree[0].style.display = spanBarThree[0].style.display == "" ? "none" : "";
-    spanBarThree[1].style.display = spanBarThree[1].style.display == "" ? "none" : "";
+    spanBarThree[0].style.display =
+      spanBarThree[0].style.display == "" ? "none" : "";
+    spanBarThree[1].style.display =
+      spanBarThree[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -170,8 +174,10 @@ function svgScroll() {
 
 function blinkerFour() {
   setInterval(function () {
-    spanBarFour[0].style.display = spanBarFour[0].style.display == "" ? "none" : "";
-    spanBarFour[1].style.display = spanBarFour[1].style.display == "" ? "none" : "";
+    spanBarFour[0].style.display =
+      spanBarFour[0].style.display == "" ? "none" : "";
+    spanBarFour[1].style.display =
+      spanBarFour[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -207,8 +213,10 @@ function checkPositionProjects() {
 
 function blinkerFive() {
   setInterval(function () {
-    spanBarFive[0].style.display = spanBarFive[0].style.display == "" ? "none" : "";
-    spanBarFive[1].style.display = spanBarFive[1].style.display == "" ? "none" : "";
+    spanBarFive[0].style.display =
+      spanBarFive[0].style.display == "" ? "none" : "";
+    spanBarFive[1].style.display =
+      spanBarFive[1].style.display == "" ? "none" : "";
   }, 700);
 }
 
@@ -232,7 +240,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 function changeLangFr() {
   skillsLink.id = " ";
-  contactFr.innerHTML = "contacter"
+  contactFr.innerHTML = "contacter";
   enElems.forEach((enElem) => {
     enElem.style.display = "none";
   });
@@ -243,7 +251,7 @@ function changeLangFr() {
 
 function changeLangEn() {
   skillsLink.id = "skills-link";
-  contactFr.innerHTML = "contact"
+  contactFr.innerHTML = "contact";
   frElems.forEach((frElem) => {
     frElem.style.display = "none";
   });
@@ -251,4 +259,3 @@ function changeLangEn() {
     enElem.style.display = "";
   });
 }
-
