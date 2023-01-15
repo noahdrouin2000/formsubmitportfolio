@@ -172,7 +172,7 @@ body {
   width: 100vw;
   height: 440vh;
   overflow: hidden;
-  background-image: url("./Images/bg-code.png");
+  background-image: url("../Images/bg-code.png");
   position: absolute;
   display: none;
 }
@@ -184,9 +184,7 @@ body {
   width: fit-content;
   height: 440vh;
   text-align: center;
-  overflow: hidden;
   margin: auto;
-  z-index: 1;
   pointer-events: none;
   display: none;
 }
