@@ -38,8 +38,6 @@ function frLang() {
   });
 }
 
-frLang();
-
 function visited() {
   setInterval(function () {
     logoBar.style.display = logoBar.style.display == "" ? "none" : "";
