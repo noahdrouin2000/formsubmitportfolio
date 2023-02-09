@@ -1,5 +1,6 @@
 //Selectors
 
+const body = document.querySelector("body");
 const logoBar = document.querySelector(".span-n");
 const logoN = document.querySelector(".h1-n");
 const subH1 = document.querySelectorAll(".sub-h1");
@@ -256,3 +257,5 @@ function changeLangEn() {
 function budgetOutput() {
   value.textContent = budget.value;
 }
+
+body.style.display = "block";

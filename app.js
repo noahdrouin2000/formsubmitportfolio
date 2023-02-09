@@ -1,5 +1,6 @@
 //Selectors
 
+const body = document.querySelector("body");
 const logoBar = document.querySelector(".span-n");
 const logoN = document.querySelector(".h1-n");
 const loadingDiv = document.querySelector(".loading-div");
@@ -90,3 +91,5 @@ function changeLangEn() {
     enElem.style.display = "";
   });
 }
+
+body.style.display = "block";
