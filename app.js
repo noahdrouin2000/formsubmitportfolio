@@ -21,18 +21,14 @@ const mouseAnimate = document.querySelectorAll(".mouse");
 
 window.addEventListener("load", frLang);
 window.addEventListener("load", visited);
+document.addEventListener("mousemove", mouseHover);
 frBtnStart.addEventListener("click", changeLangFr);
-frBtn.addEventListener("click", changeLangFr);
 enBtnStart.addEventListener("click", changeLangEn);
-enBtn.addEventListener("click", changeLangEn);
 document.addEventListener("mousemove", mouseHover);
 
 //Functions
 
 function frLang() {
-  frElems.forEach((elem) => {
-    elem.style.display = "block";
-  });
   enElems.forEach((elem) => {
     elem.style.display = "none";
   });
@@ -64,14 +60,12 @@ function mouseHover(e) {
     const x = e.pageX;
     const scrollLeft = window.pageXOffset;
     const scrollTop = window.pageYOffset;
-    mouseAnimate.style.left = x - scrollLeft + "px";
-    mouseAnimate.style.top = y - scrollTop + "px";
+    mouseAnimate[0].style.left = x - scrollLeft + "px";
+    mouseAnimate[0].style.top = y - scrollTop + "px";
   }, 125);
 }
 
 function changeLangFr() {
-  skillsLink.id = " ";
-  contactFr.innerHTML = "contacter";
   enElems.forEach((enElem) => {
     enElem.style.display = "none";
   });
@@ -81,8 +75,6 @@ function changeLangFr() {
 }
 
 function changeLangEn() {
-  skillsLink.id = "skills-link";
-  contactFr.innerHTML = "contact";
   frElems.forEach((frElem) => {
     frElem.style.display = "none";
   });
