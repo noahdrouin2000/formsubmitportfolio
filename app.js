@@ -45,9 +45,6 @@ function visited() {
       }, 3000);
     }
   }
-  enElems.forEach((enElem) => {
-    enElem.style.display = "none";
-  });
 }
 
 function mouseHover(e) {

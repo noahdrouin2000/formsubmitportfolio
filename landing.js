@@ -58,15 +58,6 @@ budget.addEventListener("input", budgetOutput);
 
 //Functions
 
-function frLang() {
-  frElems.forEach((elem) => {
-    elem.style.display = "block";
-  });
-  enElems.forEach((elem) => {
-    elem.style.display = "none";
-  });
-}
-
 function blinkerTwo() {
   setInterval(function () {
     spanBar.style.display = spanBar.style.display == "" ? "none" : "";
