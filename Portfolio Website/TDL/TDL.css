@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a1930;
+  font-family: "Anonymous Pro", monospace;
+  overscroll-behavior-y: none;
+  overscroll-behavior: none;
+}
+
+.mouse {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 3px outset #8892af;
+  animation: rotation-mouse 3s linear infinite;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@keyframes rotation-mouse {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.first-page {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../Images/bg-code.png");
+  overflow: hidden;
+  position: absolute;
+}
+
+svg {
+  display: inline-block;
+  height: 440vh;
+}
+
+@keyframes bg-load {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.125;
+  }
+}
+
+.nav {
+  display: flex;
+  height: 8rem;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.logo {
+  width: 30%;
+  animation: fromLeft 0.3s ease;
+  animation-fill-mode: both;
+  animation-delay: 1000ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+  width: fit-content;
+  height: fit-content;
+  color: #22ddd5;
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.span_ {
+  position: absolute;
+  color: #c01ec8;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-45px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+.nav-links {
+  width: 90%;
+  z-index: 6;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: right;
+  margin-right: 5rem;
+}
+
+.li-animation {
+  color: #1ec8c0;
+  display: flex;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 1;
+  align-items: center;
+}
+
+.li-animation span {
+  color: #c01ec8;
+}
+
+#home {
+  animation: type 2s steps(8, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 3rem;
+}
+
+#home:hover,
+#about:hover,
+#skills:hover,
+#projects:hover,
+#rates:hover,
+#contact:hover {
+  color: #c01ec8;
+}
+
+#about {
+  animation: type 2.25s steps(9, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 3rem;
+}
+
+#skills {
+  animation: type 2.5s steps(10, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 3rem;
+}
+
+#projects {
+  animation: type 3s steps(12, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 3rem;
+}
+
+#contact {
+  animation: type 2.75s steps(11, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 2rem;
+}
+
+#rates {
+  animation: type 2.5s steps(10, end);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  text-decoration: none;
+  color: #1ec8c0;
+  transition: color 0.6s ease;
+  margin-right: 3rem;
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+.fr-a {
+  text-decoration: none;
+  color: #c01ec8;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #c01ec8;
+  border-radius: 7px;
+  margin-left: 1.5rem;
+  transition: all 0.75s ease;
+  margin-right: 1.5rem;
+}
+
+.fr-a:hover {
+  color: #0a1930;
+  background-color: #c01ec8;
+}
+
+.en-a {
+  text-decoration: none;
+  color: #1ec8c0;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border: 2.5px solid #1ec8c0;
+  border-radius: 7px;
+  transition: all 0.75s ease;
+}
+
+.en-a:hover {
+  color: #0a1930;
+  background-color: #1ec8c0;
+}
+
+.page {
+  width: 100vw;
+  height: 100%;
+  animation: fadeIn 3.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.title-cont {
+  margin: 9rem 15rem 6rem 15rem;
+  width: 50%;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: #ccd6f5;
+  width: 100%;
+}
+
+.text-cont {
+  width: 70%;
+  height: 20rem;
+  margin-left: 15rem;
+  display: flex;
+}
+
+.p-cont {
+  width: 50%;
+}
+
+.link-cont {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.p-cont p {
+  color: #ccd6f5;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.tech-cont {
+  height: 16rem;
+  width: fit-content;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tech-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2.3rem;
+  height: 100%;
+  margin-top: 0.5rem;
+  position: relative;
+  left: -12.8rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.tech-li {
+  color: #8892af;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.tech-cont a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  background-image: linear-gradient(
+    to right,
+    #1ec8c0,
+    #1ec8c0 50%,
+    #ccd6f5 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.tech-cont a::after {
+  content: "";
+  background-color: #1ec8c0;
+  display: block;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: all 0.5s ease-in-out;
+}
+
+.tech-cont a:hover::after {
+  width: 100%;
+}
+
+.tech-cont a:hover {
+  background-position: 0;
+}
+
+.open-cont {
+  width: fit-content;
+}
+
+.open-cont::after {
+  content: "";
+  background-color: #1ec8c0;
+  display: block;
+  left: 0;
+  width: 7.5rem;
+  height: 2px;
+}
+
+.open-cont a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #ccd6f5;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: flex-start;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    #1ec8c0,
+    rgb(30, 200, 191) 50%,
+    rgba(30, 200, 191, 0) 50%
+  );
+  background-size: 100% 200%;
+  background-position-y: -100%;
+  transition: all 0.6s ease-in-out;
+  position: relative;
+}
+
+.open-cont a:hover {
+  background-position-y: 0;
+}
+
+.open-cont i {
+  color: #ccd6f5;
+  margin-left: 1rem;
+}
+
+.h4-projet {
+  font-weight: 300;
+  font-size: 1.55rem;
+}
+
+#white-arrow {
+  position: absolute;
+  margin-left: 0;
+  left: -1.4rem;
+  transition: all 0.6s ease-in-out;
+}
+
+#blue-arrow {
+  position: absolute;
+  right: 0;
+  color: #1ec8c0;
+  transition: all 0.6s ease-in-out;
+}
+
+.info-cont-total {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.info-cont {
+  width: 80%;
+  height: 35rem;
+  display: flex;
+  justify-content: center;
+}
+
+.color-cont {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.color-title-cont {
+  width: fit-content;
+}
+
+.color-title-cont h3 {
+  font-size: 2rem;
+  color: #ccd6f5;
+  font-weight: 400;
+}
+
+.color-bubbles-cont {
+  margin-top: 2.5rem;
+  width: 40%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bubble-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-bubble {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  border: 3px solid #ccd6f5;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.color-bubble:hover {
+  transform: translateY(-1rem);
+}
+
+.bubble-cont h4 {
+  color: #ccd6f5;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  width: 100%;
+}
+
+#bubble-one {
+  background-color: #23d5ab;
+}
+
+#bubble-two {
+  background-color: #23a6d5;
+}
+
+#bubble-three {
+  background-color: #e73c7e;
+}
+
+#bubble-four {
+  background-color: #ee7752;
+}
+
+#bubble-five {
+  background-color: white;
+}
