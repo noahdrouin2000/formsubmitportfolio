@@ -19,20 +19,11 @@ const mouseAnimate = document.querySelectorAll(".mouse");
 
 //Event Listeners
 
-window.addEventListener("load", frLang);
 window.addEventListener("load", visited);
 document.addEventListener("mousemove", mouseHover);
-frBtnStart.addEventListener("click", changeLangFr);
-enBtnStart.addEventListener("click", changeLangEn);
 document.addEventListener("mousemove", mouseHover);
 
 //Functions
-
-function frLang() {
-  enElems.forEach((elem) => {
-    elem.style.display = "none";
-  });
-}
 
 function visited() {
   setInterval(function () {
@@ -63,22 +54,4 @@ function mouseHover(e) {
     mouseAnimate[0].style.left = x - scrollLeft + "px";
     mouseAnimate[0].style.top = y - scrollTop + "px";
   }, 125);
-}
-
-function changeLangFr() {
-  enElems.forEach((enElem) => {
-    enElem.style.display = "none";
-  });
-  frElems.forEach((frElem) => {
-    frElem.style.display = "";
-  });
-}
-
-function changeLangEn() {
-  frElems.forEach((frElem) => {
-    frElem.style.display = "none";
-  });
-  enElems.forEach((enElem) => {
-    enElem.style.display = "";
-  });
 }
