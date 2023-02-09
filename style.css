@@ -172,7 +172,7 @@ body {
   width: 100vw;
   height: fit-content;
   overflow: hidden;
-  background-image: url("../Images/bg-code.png");
+  background-image: url("./bg-code.png");
   position: absolute;
 }
 

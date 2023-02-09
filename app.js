@@ -2,7 +2,6 @@
 
 const logoBar = document.querySelector(".span-n");
 const logoN = document.querySelector(".h1-n");
-const loadingDiv = document.querySelector(".loading-div");
 const subH1 = document.querySelectorAll(".sub-h1");
 const loadingBarCont = document.querySelector(".loading-bar-container");
 const loadingBar = document.querySelector(".loading-bar");
@@ -27,15 +26,12 @@ const enBtn = document.querySelector(".en-a");
 const frElems = document.querySelectorAll("body [lang='fr']");
 const enElems = document.querySelectorAll("body [lang='en']");
 const skillsLink = document.getElementById("skills-link");
-const frBtnStart = document.querySelector(".fr-start");
-const enBtnStart = document.querySelector(".en-start");
 const contactFr = document.querySelector(".contact-fr");
 const value = document.querySelector("#valeur");
 const budget = document.querySelector("#budget");
 
 //Event Listeners
 
-window.addEventListener("load", visited);
 window.addEventListener("load", blinkerTwo);
 window.addEventListener("load", blinkerSkills);
 window.addEventListener("scroll", checkPosition);
@@ -55,48 +51,11 @@ for (var i = 0; i < projectImg.length; i++) {
 for (var i = 0; i < projectImg.length; i++) {
   projectImg[i].addEventListener("mouseleave", greyOverlayOut);
 }
-frBtnStart.addEventListener("click", changeLangFr);
 frBtn.addEventListener("click", changeLangFr);
-enBtnStart.addEventListener("click", changeLangEn);
 enBtn.addEventListener("click", changeLangEn);
 budget.addEventListener("input", budgetOutput);
 
 //Functions
-
-window.localStorage.clear();
-
-function visited() {
-  const firstVisit = localStorage.getItem("visited");
-  if (firstVisit == null) {
-    localStorage.setItem("visited", 1);
-    setInterval(function () {
-      logoBar.style.display = logoBar.style.display == "" ? "none" : "";
-    }, 700);
-    window.addEventListener("keydown", writeN);
-    function writeN(e) {
-      if (e.key === "n") {
-        logoN.style.display = "flex";
-        logoBar.style.left = "55%";
-        subH1[0].style.display = "none";
-        subH1[1].style.display = "none";
-        loadingBarCont.style.display = "flex";
-        loadingBar.classList = "loading-bar-start";
-        setTimeout(function timeOut() {
-          loadingDiv.style.display = "none";
-          firstPage.style.display = "block";
-          lineContainer.style.display = "block";
-        }, 3000);
-      }
-    }
-  } else {
-    loadingDiv.style.display = "none";
-    firstPage.style.display = "block";
-    lineContainer.style.display = "block";
-  }
-  enElems.forEach((enElem) => {
-    enElem.style.display = "none";
-  });
-}
 
 function blinkerTwo() {
   setInterval(function () {
