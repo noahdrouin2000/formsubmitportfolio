@@ -19,6 +19,7 @@ const mouseAnimate = document.querySelectorAll(".mouse");
 
 //Event Listeners
 
+window.addEventListener("load", frLang);
 window.addEventListener("load", visited);
 frBtnStart.addEventListener("click", changeLangFr);
 frBtn.addEventListener("click", changeLangFr);
@@ -91,5 +92,3 @@ function changeLangEn() {
     enElem.style.display = "";
   });
 }
-
-body.style.display = "block";
