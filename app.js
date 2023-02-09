@@ -58,7 +58,10 @@ budget.addEventListener("input", budgetOutput);
 
 //Functions
 
-function frLang() {
+function frLang() {
+  frElems.forEach((elem) => {
+    elem.style.display = "block";
+  });
   enElems.forEach((elem) => {
     elem.style.display = "none";
   });
