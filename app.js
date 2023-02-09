@@ -27,6 +27,17 @@ document.addEventListener("mousemove", mouseHover);
 
 //Functions
 
+function frLang() {
+  frElems.forEach((elem) => {
+    elem.style.display = "block";
+  });
+  enElems.forEach((elem) => {
+    elem.style.display = "none";
+  });
+}
+
+frLang();
+
 function visited() {
   setInterval(function () {
     logoBar.style.display = logoBar.style.display == "" ? "none" : "";
@@ -45,9 +56,6 @@ function visited() {
       }, 3000);
     }
   }
-  enElems.forEach((enElem) => {
-    enElem.style.display = "none";
-  });
 }
 
 function mouseHover(e) {

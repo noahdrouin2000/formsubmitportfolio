@@ -32,7 +32,6 @@ const budget = document.querySelector("#budget");
 
 //Event Listeners
 
-window.addEventListener("load", frLang);
 window.addEventListener("load", blinkerTwo);
 window.addEventListener("load", blinkerSkills);
 window.addEventListener("scroll", checkPosition);
@@ -66,6 +65,8 @@ function frLang() {
     elem.style.display = "none";
   });
 }
+
+frLang();
 
 function blinkerTwo() {
   setInterval(function () {
