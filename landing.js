@@ -233,7 +233,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 function changeLangFr() {
-  skillsLink.id = " ";
+  skillsLink.id = "skills-link";
   contactFr.innerHTML = "contacter";
   enElems.forEach((enElem) => {
     enElem.style.display = "none";
@@ -244,7 +244,7 @@ function changeLangFr() {
 }
 
 function changeLangEn() {
-  skillsLink.id = "skills-link";
+  skillsLink.id = " ";
   contactFr.innerHTML = "contact";
   frElems.forEach((frElem) => {
     frElem.style.display = "none";
