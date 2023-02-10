@@ -22,8 +22,39 @@ const mouseAnimate = document.querySelectorAll(".mouse");
 window.addEventListener("load", visited);
 document.addEventListener("mousemove", mouseHover);
 document.addEventListener("mousemove", mouseHover);
+frBtn.addEventListener("click", changeLangFr);
+enBtn.addEventListener("click", changeLangEn);
 
 //Functions
+
+function changeLangFr() {
+  enElems.forEach((enElem) => {
+    enElem.style.display = "none";
+  });
+  frElems.forEach((frElem) => {
+    frElem.style.display = "";
+  });
+}
+
+function changeLangEn() {
+  frElems.forEach((frElem) => {
+    frElem.style.display = "none";
+  });
+  enElems.forEach((enElem) => {
+    enElem.style.display = "";
+  });
+}
+
+function frLang() {
+  frElems.forEach((elem) => {
+    elem.style.display = "block";
+  });
+  enElems.forEach((elem) => {
+    elem.style.display = "none";
+  });
+}
+
+frLang();
 
 function visited() {
   setInterval(function () {
