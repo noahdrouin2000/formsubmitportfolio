@@ -35,7 +35,7 @@ body {
 .first-page {
   width: 100vw;
   height: 100vh;
-  background-image: url("../Images/bg-code.png");
+  background-image: url("../Images/bg-code.jpg");
   overflow: hidden;
   position: absolute;
 }
@@ -261,7 +261,6 @@ svg {
     opacity: 100%;
   }
 }
-
 
 .title-cont {
   margin: 9rem 15rem 6rem 15rem;
