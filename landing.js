@@ -41,7 +41,7 @@ window.addEventListener("scroll", checkPositionPrice);
 document.addEventListener("mousemove", mouseHover);
 document.addEventListener("mousemove", movingBg);
 window.addEventListener("load", blinkerThree);
-window.addEventListener("scroll", svgScroll);
+window.addEventListener('scroll', myEventHandler);
 window.addEventListener("load", blinkerFour);
 window.addEventListener("load", blinkerFive);
 window.addEventListener("scroll", checkPositionProjects);
@@ -138,6 +138,10 @@ function blinkerThree() {
     spanBarThree[1].style.display =
       spanBarThree[1].style.display == "" ? "none" : "";
   }, 700);
+}
+
+function myEventHandler() {
+  requestAnimationFrame(svgScroll);
 }
 
 let pathLength = path.getTotalLength();
@@ -259,3 +263,4 @@ function budgetOutput() {
 }
 
 body.style.display = "block";
+
