@@ -32,24 +32,15 @@ const h4Projet = document.querySelector(".h4-projet");
 
 //Event Listeners
 
-window.addEventListener("load", blinkerLoading);
 window.addEventListener("load", blinkerTwo);
 document.addEventListener("mousemove", mouseHover);
 document.addEventListener("mousemove", movingBg);
-frBtn.addEventListener("click", changeLangFr);
-enBtn.addEventListener("click", changeLangEn);
 openContA.addEventListener("mouseenter", arrowAnimStart);
 openContA.addEventListener("mouseleave", arrowAnimEnd);
 techA.addEventListener("mouseenter", showAnimStart);
 techA.addEventListener("mouseleave", showAnimEnd);
 
 //Functions
-
-function blinkerLoading() {
-  enElems.forEach((enElem) => {
-    enElem.style.display = "none";
-  });
-}
 
 function blinkerTwo() {
   setInterval(function () {
@@ -84,6 +75,30 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       behavior: "smooth",
     });
   });
+});
+
+let lang = localStorage.getItem("lang");
+
+if (!lang) {
+  localStorage.setItem("lang", "fr");
+  lang = "fr";
+}
+
+if (lang === "fr") {
+  changeLangFr();
+} else {
+  changeLangEn();
+}
+
+frBtn.addEventListener("click", () => {
+  lang = "fr";
+  localStorage.setItem("lang", lang);
+  location.reload();
+});
+enBtn.addEventListener("click", () => {
+  lang = "en";
+  localStorage.setItem("lang", lang);
+  location.reload();
 });
 
 function changeLangFr() {
@@ -123,8 +138,3 @@ function showAnimStart() {
 function showAnimEnd() {
   techUl.style.left = "-12.8rem";
 }
-
-
-
-
-

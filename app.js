@@ -22,10 +22,32 @@ const mouseAnimate = document.querySelectorAll(".mouse");
 window.addEventListener("load", visited);
 document.addEventListener("mousemove", mouseHover);
 document.addEventListener("mousemove", mouseHover);
-frBtn.addEventListener("click", changeLangFr);
-enBtn.addEventListener("click", changeLangEn);
 
 //Functions
+
+let lang = localStorage.getItem("lang");
+
+if (!lang) {
+  localStorage.setItem("lang", "fr");
+  lang = "fr";
+}
+
+if (lang === "fr") {
+  changeLangFr();
+} else {
+  changeLangEn();
+}
+
+frBtn.addEventListener("click", () => {
+  lang = "fr";
+  localStorage.setItem("lang", lang);
+  location.reload();
+});
+enBtn.addEventListener("click", () => {
+  lang = "en";
+  localStorage.setItem("lang", lang);
+  location.reload();
+});
 
 function changeLangFr() {
   enElems.forEach((enElem) => {
@@ -44,17 +66,6 @@ function changeLangEn() {
     enElem.style.display = "";
   });
 }
-
-function frLang() {
-  frElems.forEach((elem) => {
-    elem.style.display = "block";
-  });
-  enElems.forEach((elem) => {
-    elem.style.display = "none";
-  });
-}
-
-frLang();
 
 function visited() {
   setInterval(function () {

@@ -52,22 +52,51 @@ for (var i = 0; i < projectImg.length; i++) {
 for (var i = 0; i < projectImg.length; i++) {
   projectImg[i].addEventListener("mouseleave", greyOverlayOut);
 }
-frBtn.addEventListener("click", changeLangFr);
-enBtn.addEventListener("click", changeLangEn);
 budget.addEventListener("input", budgetOutput);
 
 //Functions
 
-function frLang() {
-  frElems.forEach((elem) => {
-    elem.style.display = "block";
+let lang = localStorage.getItem("lang");
+
+if (!lang) {
+  localStorage.setItem("lang", "fr");
+  lang = "fr";
+}
+
+if (lang === "fr") {
+  changeLangFr();
+} else {
+  changeLangEn();
+}
+
+frBtn.addEventListener("click", () => {
+  lang = "fr";
+  localStorage.setItem("lang", lang);
+  location.reload();
+});
+enBtn.addEventListener("click", () => {
+  lang = "en";
+  localStorage.setItem("lang", lang);
+  location.reload();
+});
+
+function changeLangFr() {
+  enElems.forEach((enElem) => {
+    enElem.style.display = "none";
   });
-  enElems.forEach((elem) => {
-    elem.style.display = "none";
+  frElems.forEach((frElem) => {
+    frElem.style.display = "";
   });
 }
 
-frLang();
+function changeLangEn() {
+  frElems.forEach((frElem) => {
+    frElem.style.display = "none";
+  });
+  enElems.forEach((enElem) => {
+    enElem.style.display = "";
+  });
+}
 
 function blinkerTwo() {
   setInterval(function () {
