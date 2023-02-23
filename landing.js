@@ -46,12 +46,6 @@ window.addEventListener("load", blinkerFour);
 window.addEventListener("load", blinkerFive);
 window.addEventListener("scroll", checkPositionProjects);
 window.addEventListener("scroll", checkPositionContact);
-for (var i = 0; i < projectImg.length; i++) {
-  projectImg[i].addEventListener("mouseenter", greyOverlay);
-}
-for (var i = 0; i < projectImg.length; i++) {
-  projectImg[i].addEventListener("mouseleave", greyOverlayOut);
-}
 budget.addEventListener("input", budgetOutput);
 
 //Functions
@@ -206,27 +200,6 @@ function blinkerFour() {
     spanBarFour[1].style.display =
       spanBarFour[1].style.display == "" ? "none" : "";
   }, 700);
-}
-
-function greyOverlay(e) {
-  const target = e.target;
-  if (
-    target.parentElement.className === "project-one" ||
-    target.parentElement.className === "project-two"
-  ) {
-    target.className = "zoom-in";
-  } else if (target.parentElement.className === "project-three") {
-    target.className = "zoom-in-matante";
-  }
-}
-
-function greyOverlayOut(e) {
-  const target = e.target;
-  if (target.parentElement.parentElement.className === "first-row") {
-    target.className = "project-img";
-  } else if (target.parentElement.parentElement.className === "sec-row") {
-    target.className = "project-img";
-  }
 }
 
 function checkPositionProjects() {
